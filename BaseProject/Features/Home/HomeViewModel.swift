@@ -17,18 +17,26 @@ struct HomeViewModel {
         
         var swift = CatalogModel(id: 2, title: CatagoryType.SWIFT.rawValue, catalogType: .SWIFT)
         var swiftData: [CatalogItemModel] = []
-        for index in 11...20 {
-            var value = CatalogItemModel(id: index, title: "\(index) -ui view controller", type: .UIKIT)
-            value.desc = "ui view controller CatalogItemModel(id: index, title:  type: .UIKIT)"
-            swiftData.append(value)
-        }
+        
+        // MARK: - WebKit
+        let wk = CatalogItemModel(id: "WebKit1",
+                                  title: "WKWebView",
+                                  type: .WKWEBVIEW,
+                                  desc: "Creating a simple browser with WKWebView",
+                                  image: nil,
+                                  urlReferent: "https://www.hackingwithswift.com/read/4/2/creating-a-simple-browser-with-wkwebview",
+                                  urlGit: "",
+                                  urlDoc: "")
+        swiftData.append(wk)
+        
+        
         swift.data = swiftData
         data.append(swift)
         
         var pod = CatalogModel(id: 3, title: CatagoryType.POD.rawValue, catalogType: .POD)
         var podData: [CatalogItemModel] = []
         for index in 21...30 {
-            var value = CatalogItemModel(id: index, title: "\(index) -lib pod", type: .UIKIT)
+            var value = CatalogItemModel(id: "index", title: "\(index) -lib pod", type: .UIKIT)
             value.desc = "lib pod CatalogItemModel(id: index, title:  type: .UIKIT)"
             podData.append(value)
         }
@@ -38,7 +46,7 @@ struct HomeViewModel {
         var example = CatalogModel(id: 4, title: CatagoryType.EXAMPLE.rawValue, catalogType: .EXAMPLE)
         var exData: [CatalogItemModel] = []
         for index in 31...40 {
-            var value = CatalogItemModel(id: index, title: "\(index) -custom view", type: .UIKIT)
+            var value = CatalogItemModel(id: "index", title: "\(index) -custom view", type: .UIKIT)
             value.desc = "custom view CatalogItemModel(id: index, title:  type: .UIKIT)"
             exData.append(value)
         }

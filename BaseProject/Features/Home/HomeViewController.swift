@@ -26,9 +26,10 @@ class HomeViewController: UIViewController {
         let sc = UISearchController(searchResultsController: nil)
         sc.searchResultsUpdater = self
         sc.obscuresBackgroundDuringPresentation = false
-        sc.searchBar.placeholder = "Search Lib"
+        sc.searchBar.placeholder = Constants.String.searchBarPlaceholder
         sc.searchBar.sizeToFit()
         sc.searchBar.searchBarStyle = .prominent
+        sc.view.isHidden = true
         
         var scope: [String] = []
         for item in CatagoryType.allCases {
@@ -49,9 +50,10 @@ class HomeViewController: UIViewController {
         navigationItem.searchController = searchController
         title = viewModel.getHomeModel().title
         
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
-        tapGesture.cancelsTouchesInView = true
-        tbContent.addGestureRecognizer(tapGesture)
+//        tbContent.tableHeaderView = searchController.searchBar
+//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+//        tapGesture.cancelsTouchesInView = true
+//        tbContent.addGestureRecognizer(tapGesture)
         
         
     }
@@ -133,14 +135,43 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeItemCell.classId, for: indexPath) as? HomeItemCell else {
             fatalError("Can't dequeue reusable cell home item cell")
         }
-        if let object = viewModel.getValueAt(indexPath.section),
-           let value = object.data?[indexPath.row] {
-            cell.model = value
-        }
+        
         if isFiltering() {
             cell.model = filteredLibType[indexPath.section].data?[indexPath.row]
+        } else {
+            if let object = viewModel.getValueAt(indexPath.section),
+               let value = object.data?[indexPath.row] {
+                cell.model = value
+            }
         }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if isFiltering() {
+            return filteredLibType[section].catalogType.rawValue
+        } else {
+            return viewModel.getContent()[section].catalogType.rawValue
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = WebDetailViewController()
+        let object = isFiltering() ?
+            filteredLibType[indexPath.section].data?[indexPath.row] :
+            viewModel.getContent()[indexPath.section].data?[indexPath.row]
+        guard let value = object?.urlReferent, let url = URL(string: value) else {
+            print("=> Log: url web detail view controller")
+            return
+        }
+        vc.url = url
+        vc.title = object?.title
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 

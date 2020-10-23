@@ -11,5 +11,6 @@ import Foundation
 enum Constants {
     enum String {
         static let homeTitle = "iOS Lib & Example"
+        static let searchBarPlaceholder = "Search Lib ..."
     }
 }

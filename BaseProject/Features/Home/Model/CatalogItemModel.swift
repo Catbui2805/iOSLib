@@ -11,6 +11,7 @@ import Foundation
 enum LibType: String, CaseIterable {
     case UIKIT = "UIKit"
     case SWIFTUI = "SwiftUI"
+    case WKWEBVIEW = "WKWebView"
 }
 
 enum ElementType: String, CaseIterable {
@@ -19,7 +20,7 @@ enum ElementType: String, CaseIterable {
 }
 
 struct CatalogItemModel {
-    var id: Int
+    var id: String
     var title: String
     var libType: LibType
     var desc: String?
@@ -28,13 +29,13 @@ struct CatalogItemModel {
     var urlGit: String?
     var urlDoc: String?
     
-    init(id: Int, title: String, type: LibType) {
+    init(id: String, title: String, type: LibType) {
         self.id = id
         self.title = title
         self.libType = type
     }
     
-    init(id: Int, title: String, type: LibType, desc: String?, image: String?, urlReferent: String?, urlGit: String, urlDoc: String) {
+    init(id: String, title: String, type: LibType, desc: String?, image: String?, urlReferent: String?, urlGit: String, urlDoc: String) {
         self.id = id
         self.title = title
         self.desc = desc
