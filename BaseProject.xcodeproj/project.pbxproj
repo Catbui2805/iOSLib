@@ -19,6 +19,10 @@
 		2645C98F2540A8FE0061CBE2 /* CatalogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2645C98E2540A8FE0061CBE2 /* CatalogModel.swift */; };
 		2645C9932540AA110061CBE2 /* CatalogItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2645C9922540AA110061CBE2 /* CatalogItemModel.swift */; };
 		26C6DF1D25427D240054AD73 /* WebDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6DF1C25427D240054AD73 /* WebDetailViewController.swift */; };
+		26C6DF7C2542B81F0054AD73 /* ContentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6DF7B2542B81F0054AD73 /* ContentDetailViewController.swift */; };
+		26C6DF812542BADE0054AD73 /* ContentDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6DF802542BADE0054AD73 /* ContentDetailViewModel.swift */; };
+		26C6DF852542BAF10054AD73 /* ContentDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6DF842542BAF10054AD73 /* ContentDetailModel.swift */; };
+		26C6E0402543157D0054AD73 /* ContentDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6E03F2543157D0054AD73 /* ContentDetailCell.swift */; };
 		26DB8ABE251B050F00D3433E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DB8ABD251B050F00D3433E /* AppDelegate.swift */; };
 		26DB8AC0251B050F00D3433E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DB8ABF251B050F00D3433E /* SceneDelegate.swift */; };
 		26DB8AC2251B050F00D3433E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DB8AC1251B050F00D3433E /* HomeViewController.swift */; };
@@ -39,6 +43,10 @@
 		2645C98E2540A8FE0061CBE2 /* CatalogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogModel.swift; sourceTree = "<group>"; };
 		2645C9922540AA110061CBE2 /* CatalogItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogItemModel.swift; sourceTree = "<group>"; };
 		26C6DF1C25427D240054AD73 /* WebDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDetailViewController.swift; sourceTree = "<group>"; };
+		26C6DF7B2542B81F0054AD73 /* ContentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailViewController.swift; sourceTree = "<group>"; };
+		26C6DF802542BADE0054AD73 /* ContentDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailViewModel.swift; sourceTree = "<group>"; };
+		26C6DF842542BAF10054AD73 /* ContentDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailModel.swift; sourceTree = "<group>"; };
+		26C6E03F2543157D0054AD73 /* ContentDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailCell.swift; sourceTree = "<group>"; };
 		26DB8ABA251B050F00D3433E /* BaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26DB8ABD251B050F00D3433E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26DB8ABF251B050F00D3433E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -163,9 +171,37 @@
 		26C6DF16254278470054AD73 /* ViewDetail */ = {
 			isa = PBXGroup;
 			children = (
-				26C6DF1C25427D240054AD73 /* WebDetailViewController.swift */,
+				26C6DF7F2542BA6E0054AD73 /* WebDetail */,
+				26C6DF7E2542BA410054AD73 /* ContentDetail */,
 			);
 			path = ViewDetail;
+			sourceTree = "<group>";
+		};
+		26C6DF7E2542BA410054AD73 /* ContentDetail */ = {
+			isa = PBXGroup;
+			children = (
+				26C6DF872542BE2C0054AD73 /* Cells */,
+				26C6DF7B2542B81F0054AD73 /* ContentDetailViewController.swift */,
+				26C6DF802542BADE0054AD73 /* ContentDetailViewModel.swift */,
+				26C6DF842542BAF10054AD73 /* ContentDetailModel.swift */,
+			);
+			path = ContentDetail;
+			sourceTree = "<group>";
+		};
+		26C6DF7F2542BA6E0054AD73 /* WebDetail */ = {
+			isa = PBXGroup;
+			children = (
+				26C6DF1C25427D240054AD73 /* WebDetailViewController.swift */,
+			);
+			path = WebDetail;
+			sourceTree = "<group>";
+		};
+		26C6DF872542BE2C0054AD73 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				26C6E03F2543157D0054AD73 /* ContentDetailCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		26DB8AB1251B050F00D3433E = {
@@ -269,17 +305,21 @@
 				2645C98F2540A8FE0061CBE2 /* CatalogModel.swift in Sources */,
 				2645C951253FF0650061CBE2 /* HomeModel.swift in Sources */,
 				2645C9932540AA110061CBE2 /* CatalogItemModel.swift in Sources */,
+				26C6DF812542BADE0054AD73 /* ContentDetailViewModel.swift in Sources */,
 				2645C965253FF6CB0061CBE2 /* UIView+InterfaceRepresentable.swift in Sources */,
 				26DB8AC2251B050F00D3433E /* HomeViewController.swift in Sources */,
 				2645C96E2540164F0061CBE2 /* UIViewController+InterfaceInitable.swift in Sources */,
+				26C6E0402543157D0054AD73 /* ContentDetailCell.swift in Sources */,
 				2645C97C25401E420061CBE2 /* XibViewControllerable.swift in Sources */,
 				2645C96A253FF7520061CBE2 /* InterfaceInitable.swift in Sources */,
 				26C6DF1D25427D240054AD73 /* WebDetailViewController.swift in Sources */,
 				2645C971254016A70061CBE2 /* Constants.swift in Sources */,
 				26DB8ABE251B050F00D3433E /* AppDelegate.swift in Sources */,
+				26C6DF7C2542B81F0054AD73 /* ContentDetailViewController.swift in Sources */,
 				2645C955253FF1BF0061CBE2 /* HomeViewModel.swift in Sources */,
 				2645C97925401BF70061CBE2 /* HomeItemCell.swift in Sources */,
 				2645C960253FF5D40061CBE2 /* InterfaceRepresentable.swift in Sources */,
+				26C6DF852542BAF10054AD73 /* ContentDetailModel.swift in Sources */,
 				26DB8AC0251B050F00D3433E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

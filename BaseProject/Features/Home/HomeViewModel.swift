@@ -19,7 +19,7 @@ struct HomeViewModel {
         var swiftData: [CatalogItemModel] = []
         
         // MARK: - WebKit
-        let wk = CatalogItemModel(id: "WebKit1",
+        let wk = CatalogItemModel(id: UUID().uuidString,
                                   title: "WKWebView",
                                   type: .WKWEBVIEW,
                                   desc: "Creating a simple browser with WKWebView",
@@ -29,6 +29,17 @@ struct HomeViewModel {
                                   urlDoc: "")
         swiftData.append(wk)
         
+        
+        // MARK: - Foundation
+        let equatable = CatalogItemModel(id: UUID().uuidString,
+                                  title: "Equatable",
+                                  type: .FOUNDATION,
+                                  desc: "How to conform to the Equatable protocol",
+                                  image: nil,
+                                  urlReferent: "https://www.hackingwithswift.com/example-code/language/how-to-conform-to-the-equatable-protocol",
+                                  urlGit: "",
+                                  urlDoc: "")
+        swiftData.append(equatable)
         
         swift.data = swiftData
         data.append(swift)

@@ -12,6 +12,7 @@ enum LibType: String, CaseIterable {
     case UIKIT = "UIKit"
     case SWIFTUI = "SwiftUI"
     case WKWEBVIEW = "WKWebView"
+    case FOUNDATION = "Foundation"
 }
 
 enum ElementType: String, CaseIterable {

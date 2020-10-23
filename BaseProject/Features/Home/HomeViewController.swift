@@ -144,6 +144,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.model = value
             }
         }
+        cell.selectionStyle = .none
         return cell
     }
     
@@ -160,16 +161,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = WebDetailViewController()
-        let object = isFiltering() ?
+        let vc = ContentDetailViewController()
+        guard let object = isFiltering() ?
             filteredLibType[indexPath.section].data?[indexPath.row] :
-            viewModel.getContent()[indexPath.section].data?[indexPath.row]
-        guard let value = object?.urlReferent, let url = URL(string: value) else {
-            print("=> Log: url web detail view controller")
-            return
-        }
-        vc.url = url
-        vc.title = object?.title
+                viewModel.getContent()[indexPath.section].data?[indexPath.row] else { return }
+        vc.title = object.title
+        vc.viewModel = ContentDetailViewModel(catalogModel: object)
         navigationController?.setNavigationBarHidden(false, animated: true)
         navigationController?.pushViewController(vc, animated: true)
     }
