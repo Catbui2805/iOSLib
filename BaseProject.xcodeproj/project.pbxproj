@@ -22,6 +22,13 @@
 		265A8B002546D587002E1C49 /* TimerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265A8AFE2546D587002E1C49 /* TimerTableViewCell.swift */; };
 		265A8B012546D587002E1C49 /* TimerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 265A8AFF2546D587002E1C49 /* TimerTableViewCell.xib */; };
 		265A8B042546D765002E1C49 /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265A8B032546D765002E1C49 /* TimerModel.swift */; };
+		265A8D34255148EE002E1C49 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265A8D33255148EE002E1C49 /* ConversationViewController.swift */; };
+		265A8D3925514A1E002E1C49 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265A8D3825514A1E002E1C49 /* LoginViewController.swift */; };
+		265A8D3C25514A5C002E1C49 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265A8D3B25514A5C002E1C49 /* RegisterViewController.swift */; };
+		265A8D4325514ACB002E1C49 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265A8D4225514ACB002E1C49 /* VideoPlayerViewController.swift */; };
+		265A8D4825514AF0002E1C49 /* PhotoViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265A8D4725514AF0002E1C49 /* PhotoViewerViewController.swift */; };
+		265A8D4D25514B80002E1C49 /* NewConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265A8D4C25514B80002E1C49 /* NewConversationViewController.swift */; };
+		265A8D5225514BBD002E1C49 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265A8D5125514BBD002E1C49 /* ProfileViewController.swift */; };
 		26C6DF1D25427D240054AD73 /* WebDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6DF1C25427D240054AD73 /* WebDetailViewController.swift */; };
 		26C6DF7C2542B81F0054AD73 /* ContentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6DF7B2542B81F0054AD73 /* ContentDetailViewController.swift */; };
 		26C6DF812542BADE0054AD73 /* ContentDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6DF802542BADE0054AD73 /* ContentDetailViewModel.swift */; };
@@ -50,6 +57,13 @@
 		265A8AFE2546D587002E1C49 /* TimerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTableViewCell.swift; sourceTree = "<group>"; };
 		265A8AFF2546D587002E1C49 /* TimerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerTableViewCell.xib; sourceTree = "<group>"; };
 		265A8B032546D765002E1C49 /* TimerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerModel.swift; sourceTree = "<group>"; };
+		265A8D33255148EE002E1C49 /* ConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
+		265A8D3825514A1E002E1C49 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		265A8D3B25514A5C002E1C49 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		265A8D4225514ACB002E1C49 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
+		265A8D4725514AF0002E1C49 /* PhotoViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerViewController.swift; sourceTree = "<group>"; };
+		265A8D4C25514B80002E1C49 /* NewConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationViewController.swift; sourceTree = "<group>"; };
+		265A8D5125514BBD002E1C49 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		26C6DF1C25427D240054AD73 /* WebDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDetailViewController.swift; sourceTree = "<group>"; };
 		26C6DF7B2542B81F0054AD73 /* ContentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailViewController.swift; sourceTree = "<group>"; };
 		26C6DF802542BADE0054AD73 /* ContentDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailViewModel.swift; sourceTree = "<group>"; };
@@ -86,6 +100,7 @@
 		2645C949253FED250061CBE2 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				265A8D322551431E002E1C49 /* ChatApp */,
 				265A8D31255142A2002E1C49 /* UIViewController */,
 				265A8AF32546CD82002E1C49 /* UITableViews */,
 				265A8AF22546CD11002E1C49 /* UICollectionViews */,
@@ -218,6 +233,76 @@
 				26C6DF16254278470054AD73 /* ViewDetail */,
 			);
 			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		265A8D322551431E002E1C49 /* ChatApp */ = {
+			isa = PBXGroup;
+			children = (
+				265A8D5025514B9F002E1C49 /* Profile */,
+				265A8D4B25514B64002E1C49 /* NewConversation */,
+				265A8D4625514ACF002E1C49 /* PhotoViewer */,
+				265A8D4125514AB0002E1C49 /* VideoPlayer */,
+				265A8D3E25514A67002E1C49 /* Conversation */,
+				265A8D3F25514A76002E1C49 /* Login */,
+				265A8D4025514A7E002E1C49 /* Register */,
+			);
+			path = ChatApp;
+			sourceTree = "<group>";
+		};
+		265A8D3E25514A67002E1C49 /* Conversation */ = {
+			isa = PBXGroup;
+			children = (
+				265A8D33255148EE002E1C49 /* ConversationViewController.swift */,
+			);
+			path = Conversation;
+			sourceTree = "<group>";
+		};
+		265A8D3F25514A76002E1C49 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				265A8D3825514A1E002E1C49 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		265A8D4025514A7E002E1C49 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				265A8D3B25514A5C002E1C49 /* RegisterViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		265A8D4125514AB0002E1C49 /* VideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				265A8D4225514ACB002E1C49 /* VideoPlayerViewController.swift */,
+			);
+			path = VideoPlayer;
+			sourceTree = "<group>";
+		};
+		265A8D4625514ACF002E1C49 /* PhotoViewer */ = {
+			isa = PBXGroup;
+			children = (
+				265A8D4725514AF0002E1C49 /* PhotoViewerViewController.swift */,
+			);
+			path = PhotoViewer;
+			sourceTree = "<group>";
+		};
+		265A8D4B25514B64002E1C49 /* NewConversation */ = {
+			isa = PBXGroup;
+			children = (
+				265A8D4C25514B80002E1C49 /* NewConversationViewController.swift */,
+			);
+			path = NewConversation;
+			sourceTree = "<group>";
+		};
+		265A8D5025514B9F002E1C49 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				265A8D5125514BBD002E1C49 /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		26C6DF16254278470054AD73 /* ViewDetail */ = {
@@ -363,20 +448,27 @@
 				26DB8AC2251B050F00D3433E /* HomeViewController.swift in Sources */,
 				2645C96E2540164F0061CBE2 /* UIViewController+InterfaceInitable.swift in Sources */,
 				26C6E0402543157D0054AD73 /* ContentDetailCell.swift in Sources */,
+				265A8D4825514AF0002E1C49 /* PhotoViewerViewController.swift in Sources */,
 				2645C97C25401E420061CBE2 /* XibViewControllerable.swift in Sources */,
 				2645C96A253FF7520061CBE2 /* InterfaceInitable.swift in Sources */,
 				26C6DF1D25427D240054AD73 /* WebDetailViewController.swift in Sources */,
 				265A8B042546D765002E1C49 /* TimerModel.swift in Sources */,
+				265A8D5225514BBD002E1C49 /* ProfileViewController.swift in Sources */,
+				265A8D3925514A1E002E1C49 /* LoginViewController.swift in Sources */,
 				265A8B002546D587002E1C49 /* TimerTableViewCell.swift in Sources */,
 				2645C971254016A70061CBE2 /* Constants.swift in Sources */,
+				265A8D4325514ACB002E1C49 /* VideoPlayerViewController.swift in Sources */,
 				26DB8ABE251B050F00D3433E /* AppDelegate.swift in Sources */,
+				265A8D3C25514A5C002E1C49 /* RegisterViewController.swift in Sources */,
 				265A8AF62546CE09002E1C49 /* TimerTableViewController.swift in Sources */,
 				26C6DF7C2542B81F0054AD73 /* ContentDetailViewController.swift in Sources */,
 				2645C955253FF1BF0061CBE2 /* HomeViewModel.swift in Sources */,
+				265A8D4D25514B80002E1C49 /* NewConversationViewController.swift in Sources */,
 				2645C97925401BF70061CBE2 /* HomeItemCell.swift in Sources */,
 				2645C960253FF5D40061CBE2 /* InterfaceRepresentable.swift in Sources */,
 				26C6DF852542BAF10054AD73 /* ContentDetailModel.swift in Sources */,
 				26DB8AC0251B050F00D3433E /* SceneDelegate.swift in Sources */,
+				265A8D34255148EE002E1C49 /* ConversationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,7 +617,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nguyentran.BaseProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -544,7 +636,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nguyentran.BaseProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
