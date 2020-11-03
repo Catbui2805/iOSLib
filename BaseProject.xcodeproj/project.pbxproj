@@ -18,6 +18,10 @@
 		2645C97C25401E420061CBE2 /* XibViewControllerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2645C97B25401E420061CBE2 /* XibViewControllerable.swift */; };
 		2645C98F2540A8FE0061CBE2 /* CatalogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2645C98E2540A8FE0061CBE2 /* CatalogModel.swift */; };
 		2645C9932540AA110061CBE2 /* CatalogItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2645C9922540AA110061CBE2 /* CatalogItemModel.swift */; };
+		265A8AF62546CE09002E1C49 /* TimerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265A8AF52546CE09002E1C49 /* TimerTableViewController.swift */; };
+		265A8B002546D587002E1C49 /* TimerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265A8AFE2546D587002E1C49 /* TimerTableViewCell.swift */; };
+		265A8B012546D587002E1C49 /* TimerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 265A8AFF2546D587002E1C49 /* TimerTableViewCell.xib */; };
+		265A8B042546D765002E1C49 /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265A8B032546D765002E1C49 /* TimerModel.swift */; };
 		26C6DF1D25427D240054AD73 /* WebDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6DF1C25427D240054AD73 /* WebDetailViewController.swift */; };
 		26C6DF7C2542B81F0054AD73 /* ContentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6DF7B2542B81F0054AD73 /* ContentDetailViewController.swift */; };
 		26C6DF812542BADE0054AD73 /* ContentDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6DF802542BADE0054AD73 /* ContentDetailViewModel.swift */; };
@@ -42,6 +46,10 @@
 		2645C97B25401E420061CBE2 /* XibViewControllerable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibViewControllerable.swift; sourceTree = "<group>"; };
 		2645C98E2540A8FE0061CBE2 /* CatalogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogModel.swift; sourceTree = "<group>"; };
 		2645C9922540AA110061CBE2 /* CatalogItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogItemModel.swift; sourceTree = "<group>"; };
+		265A8AF52546CE09002E1C49 /* TimerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTableViewController.swift; sourceTree = "<group>"; };
+		265A8AFE2546D587002E1C49 /* TimerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTableViewCell.swift; sourceTree = "<group>"; };
+		265A8AFF2546D587002E1C49 /* TimerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerTableViewCell.xib; sourceTree = "<group>"; };
+		265A8B032546D765002E1C49 /* TimerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerModel.swift; sourceTree = "<group>"; };
 		26C6DF1C25427D240054AD73 /* WebDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDetailViewController.swift; sourceTree = "<group>"; };
 		26C6DF7B2542B81F0054AD73 /* ContentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailViewController.swift; sourceTree = "<group>"; };
 		26C6DF802542BADE0054AD73 /* ContentDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailViewModel.swift; sourceTree = "<group>"; };
@@ -78,7 +86,9 @@
 		2645C949253FED250061CBE2 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				26C6DF16254278470054AD73 /* ViewDetail */,
+				265A8D31255142A2002E1C49 /* UIViewController */,
+				265A8AF32546CD82002E1C49 /* UITableViews */,
+				265A8AF22546CD11002E1C49 /* UICollectionViews */,
 				2645C94E253FEECE0061CBE2 /* Home */,
 				2645C95C253FF2E70061CBE2 /* Common */,
 			);
@@ -166,6 +176,48 @@
 				2645C9922540AA110061CBE2 /* CatalogItemModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		265A8AF22546CD11002E1C49 /* UICollectionViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UICollectionViews;
+			sourceTree = "<group>";
+		};
+		265A8AF32546CD82002E1C49 /* UITableViews */ = {
+			isa = PBXGroup;
+			children = (
+				265A8AF42546CD8D002E1C49 /* Timer */,
+			);
+			path = UITableViews;
+			sourceTree = "<group>";
+		};
+		265A8AF42546CD8D002E1C49 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				265A8AF92546D4CA002E1C49 /* Cells */,
+				265A8AF52546CE09002E1C49 /* TimerTableViewController.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		265A8AF92546D4CA002E1C49 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				265A8AFE2546D587002E1C49 /* TimerTableViewCell.swift */,
+				265A8AFF2546D587002E1C49 /* TimerTableViewCell.xib */,
+				265A8B032546D765002E1C49 /* TimerModel.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		265A8D31255142A2002E1C49 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				26C6DF16254278470054AD73 /* ViewDetail */,
+			);
+			path = UIViewController;
 			sourceTree = "<group>";
 		};
 		26C6DF16254278470054AD73 /* ViewDetail */ = {
@@ -291,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26DB8ACA251B051100D3433E /* LaunchScreen.storyboard in Resources */,
+				265A8B012546D587002E1C49 /* TimerTableViewCell.xib in Resources */,
 				26DB8AC7251B051100D3433E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,8 +366,11 @@
 				2645C97C25401E420061CBE2 /* XibViewControllerable.swift in Sources */,
 				2645C96A253FF7520061CBE2 /* InterfaceInitable.swift in Sources */,
 				26C6DF1D25427D240054AD73 /* WebDetailViewController.swift in Sources */,
+				265A8B042546D765002E1C49 /* TimerModel.swift in Sources */,
+				265A8B002546D587002E1C49 /* TimerTableViewCell.swift in Sources */,
 				2645C971254016A70061CBE2 /* Constants.swift in Sources */,
 				26DB8ABE251B050F00D3433E /* AppDelegate.swift in Sources */,
+				265A8AF62546CE09002E1C49 /* TimerTableViewController.swift in Sources */,
 				26C6DF7C2542B81F0054AD73 /* ContentDetailViewController.swift in Sources */,
 				2645C955253FF1BF0061CBE2 /* HomeViewModel.swift in Sources */,
 				2645C97925401BF70061CBE2 /* HomeItemCell.swift in Sources */,

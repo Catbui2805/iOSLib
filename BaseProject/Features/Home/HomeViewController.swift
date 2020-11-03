@@ -161,12 +161,14 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = ContentDetailViewController()
-        guard let object = isFiltering() ?
-            filteredLibType[indexPath.section].data?[indexPath.row] :
-                viewModel.getContent()[indexPath.section].data?[indexPath.row] else { return }
-        vc.title = object.title
-        vc.viewModel = ContentDetailViewModel(catalogModel: object)
+        let vc = TimerTableViewController()
+        
+//        let vc = ContentDetailViewController()
+//        guard let object = isFiltering() ?
+//            filteredLibType[indexPath.section].data?[indexPath.row] :
+//                viewModel.getContent()[indexPath.section].data?[indexPath.row] else { return }
+//        vc.title = object.title
+//        vc.viewModel = ContentDetailViewModel(catalogModel: object)
         navigationController?.setNavigationBarHidden(false, animated: true)
         navigationController?.pushViewController(vc, animated: true)
     }
