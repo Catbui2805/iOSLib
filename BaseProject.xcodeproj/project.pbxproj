@@ -29,6 +29,7 @@
 		265A8D4825514AF0002E1C49 /* PhotoViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265A8D4725514AF0002E1C49 /* PhotoViewerViewController.swift */; };
 		265A8D4D25514B80002E1C49 /* NewConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265A8D4C25514B80002E1C49 /* NewConversationViewController.swift */; };
 		265A8D5225514BBD002E1C49 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265A8D5125514BBD002E1C49 /* ProfileViewController.swift */; };
+		265A8D592551C586002E1C49 /* UIView+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265A8D582551C586002E1C49 /* UIView+Size.swift */; };
 		26C6DF1D25427D240054AD73 /* WebDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6DF1C25427D240054AD73 /* WebDetailViewController.swift */; };
 		26C6DF7C2542B81F0054AD73 /* ContentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6DF7B2542B81F0054AD73 /* ContentDetailViewController.swift */; };
 		26C6DF812542BADE0054AD73 /* ContentDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6DF802542BADE0054AD73 /* ContentDetailViewModel.swift */; };
@@ -64,6 +65,7 @@
 		265A8D4725514AF0002E1C49 /* PhotoViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerViewController.swift; sourceTree = "<group>"; };
 		265A8D4C25514B80002E1C49 /* NewConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationViewController.swift; sourceTree = "<group>"; };
 		265A8D5125514BBD002E1C49 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		265A8D582551C586002E1C49 /* UIView+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Size.swift"; sourceTree = "<group>"; };
 		26C6DF1C25427D240054AD73 /* WebDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDetailViewController.swift; sourceTree = "<group>"; };
 		26C6DF7B2542B81F0054AD73 /* ContentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailViewController.swift; sourceTree = "<group>"; };
 		26C6DF802542BADE0054AD73 /* ContentDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailViewModel.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 		2645C949253FED250061CBE2 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				265A8D562551C4FF002E1C49 /* Extennsions */,
 				265A8D322551431E002E1C49 /* ChatApp */,
 				265A8D31255142A2002E1C49 /* UIViewController */,
 				265A8AF32546CD82002E1C49 /* UITableViews */,
@@ -305,6 +308,22 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		265A8D562551C4FF002E1C49 /* Extennsions */ = {
+			isa = PBXGroup;
+			children = (
+				265A8D572551C51C002E1C49 /* UIView */,
+			);
+			path = Extennsions;
+			sourceTree = "<group>";
+		};
+		265A8D572551C51C002E1C49 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				265A8D582551C586002E1C49 /* UIView+Size.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
 		26C6DF16254278470054AD73 /* ViewDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -451,6 +470,7 @@
 				265A8D4825514AF0002E1C49 /* PhotoViewerViewController.swift in Sources */,
 				2645C97C25401E420061CBE2 /* XibViewControllerable.swift in Sources */,
 				2645C96A253FF7520061CBE2 /* InterfaceInitable.swift in Sources */,
+				265A8D592551C586002E1C49 /* UIView+Size.swift in Sources */,
 				26C6DF1D25427D240054AD73 /* WebDetailViewController.swift in Sources */,
 				265A8B042546D765002E1C49 /* TimerModel.swift in Sources */,
 				265A8D5225514BBD002E1C49 /* ProfileViewController.swift in Sources */,
