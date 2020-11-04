@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class RegisterViewController: UIViewController {
 
@@ -157,7 +158,16 @@ extension RegisterViewController {
             return
         }
         
-        // TODO: - Firebase login
+        // - Firebase Register
+        FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password) { result , error in
+            guard let result = result, error == nil  else {
+                print("Error creating user")
+                return
+            }
+            
+            let user = result.user
+            print("Created user: \(user)")
+        }
     }
     
     func alertUserRegisterError() {
