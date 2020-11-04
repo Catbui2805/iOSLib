@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 class RegisterViewController: UIViewController {
-
+    
     lazy var sv: UIScrollView = {
         let sv = UIScrollView()
         sv.clipsToBounds = true
@@ -99,7 +99,7 @@ class RegisterViewController: UIViewController {
     }()
     
     lazy var btRegister: UIButton = {
-       let bt = UIButton()
+        let bt = UIButton()
         bt.setTitle("Register", for: .normal)
         bt.setTitleColor(.white, for: .normal)
         if #available(iOS 13.0, *) {
@@ -130,7 +130,7 @@ class RegisterViewController: UIViewController {
                           width: size, height: size)
         iv.layer.cornerRadius = iv.width / 2
         tfFirstName.frame = CGRect(x: 30, y: iv.bottom + 10,
-                               width: sv.width - 60 , height: 52)
+                                   width: sv.width - 60 , height: 52)
         tfLastName.frame = CGRect(x: 30, y: tfFirstName.bottom + 10,
                                   width: sv.width - 60, height: 52)
         tfEmail.frame = CGRect(x: 30, y: tfLastName.bottom + 10,
@@ -144,7 +144,7 @@ class RegisterViewController: UIViewController {
 
 // MARK: - Event
 extension RegisterViewController {
-   
+    
     @objc func btRegisterTapped() {
         
         tfEmail.resignFirstResponder()
@@ -159,20 +159,34 @@ extension RegisterViewController {
         }
         
         // - Firebase Register
-        FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password) { result , error in
-            guard let result = result, error == nil  else {
-                print("Error creating user")
+        
+        DatabaseManager.share.userExists(with: email) { [weak self] exists in
+            guard let strongSelf = self else { return }
+            guard !exists else {
+                // user already exists
+                strongSelf.alertUserRegisterError(message: "Looks like a user account for that email address already exists.")
                 return
             }
             
-            let user = result.user
-            print("Created user: \(user)")
+            FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password) { result , error in
+                
+                guard result != nil, error == nil  else {
+                    print("Error creating user")
+                    return
+                }
+                
+                DatabaseManager.share.insertUser(with: ChatAppUser(firstName: firstName,
+                                                                   lastName: lastName,
+                                                                   emailAddress: email))
+                
+                strongSelf.navigationController?.dismiss(animated: true, completion: nil)
+            }
         }
     }
     
-    func alertUserRegisterError() {
+    func alertUserRegisterError(message: String = "Please enter all information to create a new account.") {
         let alert = UIAlertController(title: "Woops",
-                                      message: "Please enter all information to create a new account.",
+                                      message: message,
                                       preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Dismiss",
